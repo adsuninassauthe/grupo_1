@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Escola UNINASSAU - Especialidades Clínicas</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonte Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="cadastro-container">
+
+        <!-- CABEÇALHO -->
+        <header class="cadastro-header">
+            <div class="header-logo">
+                <img src="../login/uninassau-logo-png_seeklogo-475645.png" alt="Logo UNINASSAU" class="logo-img">
+            </div>
+            <div class="header-title">
+                <h1>Especialidades Clínicas</h1>
+                <p>Serviços de saúde oferecidos à comunidade na unidade Redenção</p>
+            </div>
+        </header>
+
+        <!-- CORPO DO FORMULÁRIO / CONTEÚDO -->
+        <form class="cadastro-form" action="#" method="POST">
+
+            <!-- 1. FISIOTERAPIA -->
+            <section class="form-section">
+                <div class="section-title">
+                    <h2>Fisioterapia</h2>
+                    <p>Tratamentos especializados voltados para a reabilitação física e funcional.</p>
+                </div>
+
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label>Traumato-Ortopedia</label>
+                        <textarea readonly>Cuidados pós-fraturas, entorses, lesões musculares e disfunções articulares.</textarea>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Neurofuncional</label>
+                        <textarea readonly>Atendimento adulto e pediátrico focado na recuperação de sequelas neurológicas.</textarea>
+                    </div>
+
+                    <!-- Seleção de Médico para Fisioterapia -->
+                    <div class="input-group full-width">
+                        <label for="medico-fisioterapia">Selecionar Profissional (Fisioterapia)</label>
+                        <select id="medico-fisioterapia" name="medico_fisioterapia" required>
+                            <option value="">Selecione o profissional / fisioterapeuta</option>
+                            <option value="dr-carlos">Dr. Carlos Eduardo (Turno Manhã)</option>
+                            <option value="dra-amanda">Dra. Amanda Souza (Turno Tarde)</option>
+                            <option value="dr-marcos">Dr. Marcos Vinicius (Integral)</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. ODONTOLOGIA -->
+            <section class="form-section">
+                <div class="section-title">
+                    <h2>Odontologia</h2>
+                    <p>Assistência completa para a manutenção da saúde bucal e tratamentos odontológicos.</p>
+                </div>
+
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label>Profilaxia e Periodontia</label>
+                        <textarea readonly>Limpezas preventivas regulares, remoção de tártaro e tratamentos avançados da gengiva.</textarea>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Endodontia e Cirurgia</label>
+                        <textarea readonly>Tratamento de canal especializado e pequenas cirurgias orais em consultório.</textarea>
+                    </div>
+
+                    <!-- Seleção de Médico para Odontologia -->
+                    <div class="input-group full-width">
+                        <label for="medico-odontologia">Selecionar Profissional (Odontologia)</label>
+                        <select id="medico-odontologia" name="medico_odontologia" required>
+                            <option value="">Selecione o cirurgião-dentista</option>
+                            <option value="dra-juliana">Dra. Juliana Ribeiro (Clínica Geral)</option>
+                            <option value="dr-roberto">Dr. Roberto Alencar (Endodontia)</option>
+                            <option value="dra-beatriz">Dra. Beatriz Lima (Periodontia)</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. PSICOLOGIA -->
+            <section class="form-section">
+                <div class="section-title">
+                    <h2>Psicologia</h2>
+                    <p>Apoio à saúde mental, triagem rápida e processos psicoterápicos contínuos.</p>
+                </div>
+
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label>Triagem e Plantão Psicológico</label>
+                        <textarea readonly>Acolhimento inicial imediato e escuta emergencial qualificada para direcionamento do caso.</textarea>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Psicoterapia Individual</label>
+                        <textarea readonly>Atendimento clínico contínuo individualizado voltado para crianças, adolescentes e adultos.</textarea>
+                    </div>
+
+                    <!-- Seleção de Médico para Psicologia -->
+                    <div class="input-group full-width">
+                        <label for="medico-psicologia">Selecionar Profissional (Psicologia)</label>
+                        <select id="medico-psicologia" name="medico_psicologia" required>
+                            <option value="">Selecione o psicólogo(a)</option>
+                            <option value="prof-luciana">Profª. Luciana Mendes (Psicoterapia)</option>
+                            <option value="dr-gabriel">Dr. Gabriel Farias (Análise do Comportamento)</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. NUTRIÇÃO E ESTÉTICA -->
+            <section class="form-section">
+                <div class="section-title">
+                    <h2>Nutrição, Estética e Cosmética</h2>
+                    <p>Cuidados integrados com a alimentação equilibrada, autoimagem e estética corporal.</p>
+                </div>
+
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label>Atendimento Nutricional</label>
+                        <textarea readonly>Avaliação da composição corporal e planos alimentares personalizados para adultos e crianças.</textarea>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Protocolos Estéticos</label>
+                        <textarea readonly>Procedimentos e tratamentos faciais e corporais focados no bem-estar e saúde cutânea.</textarea>
+                    </div>
+
+                    <!-- Seleção de Médico/Nutricionista -->
+                    <div class="input-group full-width">
+                        <label for="medico-nutricao">Selecionar Profissional (Nutrição / Estética)</label>
+                        <select id="medico-nutricao" name="medico_nutricao" required>
+                            <option value="">Selecione o profissional</option>
+                            <option value="nutri-camila">Dra. Camila Vasconcelos (Nutrição Clínica)</option>
+                            <option value="estet-patricia">Dra. Patrícia Nogueira (Estética e Cosmética)</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. INFORMAÇÕES DE ATENDIMENTO E CONTATO -->
+            <section class="form-section">
+                <div class="section-title">
+                    <h2>Informações de Atendimento e Contato</h2>
+                    <p>Informações de localização e canais oficiais da clínica escola.</p>
+                </div>
+
+                <div class="form-grid">
+                    <div class="input-group full-width">
+                        <label>📍 Endereço da Unidade Redenção</label>
+                        <input type="text" value="Rua Dr. Otto Tito, nº 1771 - Bairro Redenção (Em frente ao HUT) - Teresina - PI" readonly>
+                    </div>
+
+                    <div class="input-group">
+                        <label>📞 Telefone Fixo</label>
+                        <input type="text" value="(86) 3194-1819" readonly>
+                    </div>
+
+                    <div class="input-group">
+                        <label>💬 WhatsApp Oficial</label>
+                        <input type="text" value="(86) 98857-2791" readonly>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BOTÃO DE AÇÃO / NAVEGAÇÃO -->
+            <div class="form-actions">
+                <button type="button" class="btn-submit" onclick="window.location.href='cadastro.html'">Voltar para Cadastro</button>
+            </div>
+
+        </form>
+
+    </main>
+
+</body>
+</html>

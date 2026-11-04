@@ -1,0 +1,175 @@
+/* Reset básico e variáveis de cores */
+:root {
+    --primary-blue: #142861;
+    /* Azul escuro de fundo */
+    --accent-yellow: #f1cf38;
+    /* Amarelo do cartão central */
+    --button-blue: #0f1d47;
+    /* Azul do botão entrar */
+    --text-dark: #1f1f1f;
+    /* Texto escuro dos labels */
+    --link-blue: #2563eb;
+    /* Azul de destaque para os links */
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--primary-blue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container do Cartão Central */
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-card {
+    background-color: var(--accent-yellow);
+    width: 100%;
+    padding: 40px 32px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Seção do Logo */
+.logo-section {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.logo-img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 6px;
+}
+
+.logo-fallback {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+}
+
+/* Formulário */
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background-color: var(--white);
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(20, 40, 97, 0.2);
+}
+
+/* Botão de Entrar */
+.btn-submit {
+    margin-top: 10px;
+    align-self: center;
+    width: 140px;
+    padding: 10px 0;
+    background-color: var(--button-blue);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 20px;
+    /* Estilo arredondado conforme imagem */
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    letter-spacing: 1px;
+}
+
+.btn-submit:hover {
+    background-color: #1e3a8a;
+    transform: translateY(-1px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* Rodapé / Links */
+.form-footer {
+    margin-top: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #374151;
+}
+
+.form-footer p {
+    font-weight: 500;
+}
+
+.link-highlight {
+    color: var(--link-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.link-highlight:hover {
+    text-decoration: underline;
+    color: var(--primary-blue);
+}
+
+/* Adaptação para telas muito pequenas */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 20px;
+    }
+}

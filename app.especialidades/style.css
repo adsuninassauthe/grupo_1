@@ -1,0 +1,366 @@
+/* =========================================================
+   1. VARIÁVEIS DE CORES E DESIGN SYSTEM
+   ========================================================= */
+:root {
+    --primary-blue: #142861;
+    --dark-blue: #0f1d47;
+    --accent-yellow: #f1cf38;
+    --background: #f4f5f7;
+    --white: #ffffff;
+    --border: #d1d5db;
+    --text-dark: #1f1f1f;
+    --text-gray: #5f6368;
+}
+
+/* =========================================================
+   2. RESET GLOBAL
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* =========================================================
+   3. ESTILOS DO CORPO (BODY)
+   ========================================================= */
+body {
+    background-color: var(--primary-blue);
+    min-height: 100vh;
+    color: var(--text-dark);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================================================
+   4. CONTAINERS PRINCIPAIS (Login, Cadastro e Especialidades)
+   ========================================================= */
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-card {
+    background-color: var(--accent-yellow);
+    width: 100%;
+    padding: 40px 32px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cadastro-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+/* =========================================================
+   5. CABEÇALHOS (Logos e Títulos)
+   ========================================================= */
+.logo-section {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.logo-img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 6px;
+}
+
+.logo-fallback {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    letter-spacing: 1px;
+}
+
+.cadastro-header {
+    background-color: var(--accent-yellow);
+    min-height: 145px;
+    padding: 25px 40px;
+    border-radius: 14px 14px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-title {
+    text-align: right;
+}
+
+.header-title h1 {
+    color: var(--primary-blue);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.header-title p {
+    color: #374151;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* =========================================================
+   6. FORMULÁRIOS E SEÇÕES
+   ========================================================= */
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.cadastro-form {
+    background-color: var(--white);
+    padding: 35px 40px 45px;
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+.form-section {
+    position: relative;
+    border: 1px solid #e1e4e8;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    background-color: var(--white);
+    border-left: 7px solid var(--accent-yellow);
+    border-right: 7px solid var(--accent-yellow);
+}
+
+.section-title {
+    padding-bottom: 15px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.section-title h2 {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    color: var(--text-gray);
+    font-size: 0.85rem;
+}
+
+/* =========================================================
+   7. GRIDS E INPUTS
+   ========================================================= */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 22px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.input-group label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 0.92rem;
+    color: var(--text-dark);
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input,
+.input-group select {
+    height: 44px;
+}
+
+.input-group textarea {
+    min-height: 90px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(20, 40, 97, 0.12);
+}
+
+.input-group input:read-only {
+    background-color: #f1f3f5;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+/* =========================================================
+   8. BOTÕES E LINKS
+   ========================================================= */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.btn-submit {
+    min-width: 190px;
+    padding: 13px 28px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 22px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #1e3a8a;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 12px rgba(15, 29, 71, 0.25);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.form-footer {
+    margin-top: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #374151;
+}
+
+.link-highlight {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.link-highlight:hover {
+    text-decoration: underline;
+    color: var(--primary-blue);
+}
+
+/* =========================================================
+   9. RESPONSIVIDADE (Tablets e Celulares)
+   ========================================================= */
+@media (max-width: 900px) {
+    body {
+        padding: 20px;
+    }
+    .cadastro-header {
+        padding: 25px;
+    }
+    .cadastro-form {
+        padding: 30px 25px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cadastro-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 18px;
+        padding: 25px 20px;
+    }
+    .header-logo {
+        justify-content: center;
+    }
+    .header-title {
+        text-align: center;
+    }
+    .header-title h1 {
+        font-size: 1.5rem;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .full-width {
+        grid-column: auto;
+    }
+    .form-section {
+        padding: 20px;
+        border-left-width: 5px;
+        border-right-width: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .login-card {
+        padding: 30px 20px;
+    }
+    .cadastro-header {
+        border-radius: 10px 10px 0 0;
+    }
+    .cadastro-form {
+        padding: 20px 15px 30px;
+        border-radius: 0 0 10px 10px;
+    }
+    .form-section {
+        padding: 17px;
+        margin-bottom: 18px;
+        border-left-width: 4px;
+        border-right-width: 4px;
+    }
+    .section-title h2 {
+        font-size: 1.05rem;
+    }
+    .section-title p {
+        font-size: 0.78rem;
+    }
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+        font-size: 0.88rem;
+    }
+    .btn-submit {
+        width: 100%;
+    }
+}

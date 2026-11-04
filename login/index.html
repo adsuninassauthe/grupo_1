@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Escola UNINASSAU - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonte Inter do Google Fonts para visual moderno -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="login-container">
+        <div class="login-card">
+
+            <!-- Cabeçalho / Logo -->
+            <header class="logo-section">
+                <h2><p><strong>Clínica Escola</strong></p></h22>
+                <!-- Substitua pelo caminho real do logo se preferir -->
+                <img src="/login/uninassau-logo-png_seeklogo-475645.png"
+                    alt="Logo UNINASSAU" class="logo-img"
+                    onerror="this.style.display='none'; document.getElementById('alt-logo').style.display='block';">
+                <h1 id="alt-logo" class="logo-fallback" style="display: none;">UNINASSAU</h1>
+         
+            </header>
+
+            <!-- Formulário de Login -->
+            <form class="login-form" action="#" method="POST">
+
+                <div class="input-group">
+                    <label for="email-cpf">Seu email ou CPF</label>
+                    <input type="text" id="email-cpf" name="email_cpf" placeholder="Digite seu e-mail ou CPF" required
+                        autocomplete="username">
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Sua Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required
+                        autocomplete="current-password">
+                </div>
+
+                <button type="submit" class="btn-submit">ENTRAR</button>
+
+            </form>
+
+            <!-- Links Úteis -->
+            <footer class="form-footer">
+                <p>Esqueceu sua senha? <a href="#" class="link-highlight">Clique aqui</a></p>
+            </footer>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
